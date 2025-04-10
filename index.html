@@ -19,71 +19,29 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      overflow: hidden;
     }
 
     .container {
-      background-color: rgba(20, 20, 20, 0.8);
-      padding: 40px 60px;
-      border: 2px solid #ff00cc;
-      border-radius: 20px;
+      padding: 30px 50px;
+      border: 1.5px solid #ff00cc;
+      border-radius: 18px;
       box-shadow:
-        0 0 10px #ff00cc,
-        0 0 20px #ff00cc,
-        0 0 40px #ff00cc,
-        0 0 60px #ff00cc20;
-      animation: glow 2s infinite alternate;
+        0 0 6px #ff00cc,
+        0 0 12px #ff00cc,
+        0 0 25px #ff00cc,
+        0 0 40px #ff00cc30;
+      background-color: rgba(20, 20, 20, 0.75);
     }
 
     h1 {
       font-size: 6vw;
       color: #ff00cc;
       text-align: center;
-      text-shadow:
-        0 0 5px #ff00cc,
-        0 0 10px #ff00cc,
-        0 0 20px #ff00cc;
       margin: 0;
-      animation: flicker 2s infinite, blackout 15s infinite;
-    }
-
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-      }
-      20%, 24%, 55% {
-        opacity: 0.7;
-      }
-    }
-
-    @keyframes blackout {
-      0%, 80% {
-        opacity: 1;
-        filter: none;
-      }
-      81%, 99% {
-        opacity: 0.3;
-        filter: brightness(0.4) contrast(0.6);
-      }
-      100% {
-        opacity: 1;
-        filter: none;
-      }
-    }
-
-    @keyframes glow {
-      from {
-        box-shadow:
-          0 0 10px #ff00cc,
-          0 0 20px #ff00cc,
-          0 0 40px #ff00cc;
-      }
-      to {
-        box-shadow:
-          0 0 20px #ff33dd,
-          0 0 40px #ff33dd,
-          0 0 80px #ff33dd;
-      }
+      text-shadow:
+        0 0 4px #ff00cc,
+        0 0 8px #ff00cc,
+        0 0 16px #ff00cc;
     }
   </style>
 </head>
