@@ -6,95 +6,90 @@
   <title>Алис, придумай что сделать с этим сайтом</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background: #000;
+      background: radial-gradient(ellipse at center, #0f0f0f 0%, #000000 100%);
+      font-family: 'Oswald', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: 'Oswald', sans-serif;
-      text-align: center;
+      overflow: hidden;
     }
 
-    h1 {
-      font-size: 8vw;
-      max-width: 90vw;
-      padding: 20px 30px;
-      border: 4px solid #ff00cc;
+    .container {
+      background-color: rgba(20, 20, 20, 0.8);
+      padding: 40px 60px;
+      border: 2px solid #ff00cc;
       border-radius: 20px;
-      color: #ff00cc;
-      text-shadow:
-        0 0 5px #ff00cc,
+      box-shadow:
         0 0 10px #ff00cc,
         0 0 20px #ff00cc,
         0 0 40px #ff00cc,
-        0 0 80px #ff00cc;
-      box-shadow:
+        0 0 60px #ff00cc20;
+      animation: glow 2s infinite alternate;
+    }
+
+    h1 {
+      font-size: 6vw;
+      color: #ff00cc;
+      text-align: center;
+      text-shadow:
         0 0 5px #ff00cc,
         0 0 10px #ff00cc,
-        0 0 20px #ff00cc,
-        0 0 40px #ff00cc;
-      animation: flicker 2s infinite, blackout 18s infinite;
-      transition: all 0.3s ease;
+        0 0 20px #ff00cc;
+      margin: 0;
+      animation: flicker 2s infinite, blackout 15s infinite;
     }
 
     @keyframes flicker {
       0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        text-shadow:
-          0 0 5px #ff00cc,
-          0 0 10px #ff00cc,
-          0 0 20px #ff00cc,
-          0 0 40px #ff00cc,
-          0 0 80px #ff00cc;
-        box-shadow:
-          0 0 5px #ff00cc,
-          0 0 10px #ff00cc,
-          0 0 20px #ff00cc,
-          0 0 40px #ff00cc;
-        color: #ff00cc;
-        border-color: #ff00cc;
         opacity: 1;
       }
       20%, 24%, 55% {
-        text-shadow: none;
-        box-shadow: none;
-        opacity: 0.6;
+        opacity: 0.7;
       }
     }
 
     @keyframes blackout {
-      0%, 82% {
-        color: #ff00cc;
-        border-color: #ff00cc;
-        text-shadow:
-          0 0 5px #ff00cc,
-          0 0 10px #ff00cc,
-          0 0 20px #ff00cc,
-          0 0 40px #ff00cc,
-          0 0 80px #ff00cc;
-        box-shadow:
-          0 0 5px #ff00cc,
-          0 0 10px #ff00cc,
-          0 0 20px #ff00cc,
-          0 0 40px #ff00cc;
+      0%, 80% {
         opacity: 1;
+        filter: none;
       }
-      83%, 99% {
-        color: #550033;
-        border-color: #550033;
-        text-shadow: none;
-        box-shadow: none;
+      81%, 99% {
         opacity: 0.3;
+        filter: brightness(0.4) contrast(0.6);
       }
       100% {
         opacity: 1;
+        filter: none;
+      }
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow:
+          0 0 10px #ff00cc,
+          0 0 20px #ff00cc,
+          0 0 40px #ff00cc;
+      }
+      to {
+        box-shadow:
+          0 0 20px #ff33dd,
+          0 0 40px #ff33dd,
+          0 0 80px #ff33dd;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Алис, придумай что сделать с этим сайтом</h1>
+  <div class="container">
+    <h1>Алис, придумай что сделать с этим сайтом</h1>
+  </div>
 </body>
 </html>
