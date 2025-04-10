@@ -1,9 +1,11 @@
-<!DOCTYPE html><html lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Для Алиски)</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://raw.githubusercontent.com/iset737/Alice-site/main/heart.png" type="image/png"> <!-- Иконка для сайта -->
   <style>
     body, html {
       margin: 0;
@@ -14,65 +16,69 @@
       justify-content: center;
       align-items: center;
       font-family: 'Oswald', sans-serif; /* Подключаем шрифт Oswald */
-    }#heart {
-  position: relative;
-  width: 180px;
-  height: 160px;
-  z-index: 1;
-  animation-name: anime;  /* Имя анимации */
-  animation-duration: 1.5s;  /* Длительность анимации */
-  animation-iteration-count: infinite;  /* Бесконечное повторение */
-  animation-direction: alternate;  /* Анимация вперед и назад */
-  animation-timing-function: ease-in-out;  /* Эффект ускорения и замедления */
-}
+    }
 
-#heart:before, #heart:after {
-  position: absolute;
-  content: "";
-  left: 90px;
-  top: 0;
-  width: 90px;
-  height: 140px;
-  background: #d5006d; /* Темный розовый */
-  border-radius: 50px 50px 0 0;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-  box-shadow: 0 0 20px #d5006d, 0 0 40px #d5006d, 0 0 60px #d5006d; /* Подсветка того же цвета */
-}
+    #heart {
+      position: relative;
+      width: 180px;
+      height: 160px;
+      z-index: 1;
+      animation-name: anime;  /* Имя анимации */
+      animation-duration: 1.5s;  /* Длительность анимации */
+      animation-iteration-count: infinite;  /* Бесконечное повторение */
+      animation-direction: alternate;  /* Анимация вперед и назад */
+      animation-timing-function: ease-in-out;  /* Эффект ускорения и замедления */
+    }
 
-#heart:after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
-}
+    #heart:before, #heart:after {
+      position: absolute;
+      content: "";
+      left: 90px;
+      top: 0;
+      width: 90px;
+      height: 140px;
+      background: #d5006d; /* Темный розовый */
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+      box-shadow: 0 0 20px #d5006d, 0 0 40px #d5006d, 0 0 60px #d5006d; /* Подсветка того же цвета */
+    }
 
-.text {
-  position: absolute;
-  top: 37%; /* Текст чуть выше */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffb6c1;
-  font-size: 15px;
-  text-align: center;
-  text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
-  z-index: 2;
-  font-family: 'Oswald', sans-serif; /* Шрифт Oswald для текста */
-  font-weight: 500; /* Жирный шрифт */
-}
+    #heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
 
-/* Анимация пульсации */
-@keyframes anime {
-  from {
-    transform: scale(1);  /* Начальный размер */
-  }
-  to {
-    transform: scale(1.1);  /* Увеличение размера */
-  }
-}
+    .text {
+      position: absolute;
+      top: 37%; /* Текст чуть выше */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffb6c1;
+      font-size: 15px;
+      text-align: center;
+      text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+      z-index: 2;
+      font-family: 'Oswald', sans-serif; /* Шрифт Oswald для текста */
+      font-weight: 500; /* Жирный шрифт */
+    }
+
+    /* Анимация пульсации */
+    @keyframes anime {
+      from {
+        transform: scale(1);  /* Начальный размер */
+      }
+      to {
+        transform: scale(1.1);  /* Увеличение размера */
+      }
+    }
 
   </style>
 </head>
-<body>  <div id="heart">
+<body>  
+  <div id="heart">
     <div class="text">Я люблю тебя,<br>Алиска</div>
-  </div></body>
+  </div>
+</body>
 </html>
