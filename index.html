@@ -6,14 +6,10 @@
   <title>Алис, придумай что сделать с этим сайтом</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(ellipse at center, #0f0f0f 0%, #000000 100%);
+      background-color: #000;
       font-family: 'Oswald', sans-serif;
       display: flex;
       justify-content: center;
@@ -21,33 +17,28 @@
       height: 100vh;
     }
 
-    .container {
-      padding: 30px 50px;
-      border: 1.5px solid #ff00cc;
-      border-radius: 18px;
-      box-shadow:
-        0 0 6px #ff00cc,
-        0 0 12px #ff00cc,
-        0 0 25px #ff00cc,
-        0 0 40px #ff00cc30;
-      background-color: rgba(20, 20, 20, 0.75);
-    }
-
-    h1 {
-      font-size: 6vw;
+    .neon-text {
+      font-size: 5vw;
+      padding: 0.2em 0.4em;
+      border: 1px solid #ff00cc;
+      border-radius: 8px;
       color: #ff00cc;
       text-align: center;
-      margin: 0;
       text-shadow:
-        0 0 4px #ff00cc,
-        0 0 8px #ff00cc,
-        0 0 16px #ff00cc;
+        0 0 2px #ff00cc,
+        0 0 4px #ff00cc;
+      box-shadow:
+        0 0 3px #ff00cc40;
+    }
+
+    @media (max-width: 600px) {
+      .neon-text {
+        font-size: 6.5vw;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Алис, придумай что сделать с этим сайтом</h1>
-  </div>
+  <div class="neon-text">Алис, придумай что сделать с этим сайтом</div>
 </body>
 </html>
