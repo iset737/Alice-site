@@ -8,9 +8,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #1a001f, #330033, #1a001f);
-      background-size: 600% 600%;
-      animation: backgroundShift 15s ease infinite;
+      background: #000;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -22,6 +20,9 @@
     h1 {
       font-size: 8vw;
       max-width: 90vw;
+      padding: 20px;
+      border: 3px solid #ff00cc;
+      border-radius: 20px;
       color: #ff00cc;
       text-shadow:
         0 0 5px #ff00cc,
@@ -29,10 +30,11 @@
         0 0 20px #ff00cc,
         0 0 40px #ff00cc,
         0 0 80px #ff00cc;
-      animation: neonFlicker 2s infinite;
+      animation: flicker 2s infinite, blackout 10s infinite;
+      transition: all 0.3s ease;
     }
 
-    @keyframes neonFlicker {
+    @keyframes flicker {
       0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         text-shadow:
           0 0 5px #ff00cc,
@@ -40,6 +42,8 @@
           0 0 20px #ff00cc,
           0 0 40px #ff00cc,
           0 0 80px #ff00cc;
+        color: #ff00cc;
+        border-color: #ff00cc;
         opacity: 1;
       }
       20%, 24%, 55% {
@@ -48,10 +52,24 @@
       }
     }
 
-    @keyframes backgroundShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    @keyframes blackout {
+      0%, 90% {
+        color: #ff00cc;
+        border-color: #ff00cc;
+        opacity: 1;
+        text-shadow:
+          0 0 5px #ff00cc,
+          0 0 10px #ff00cc,
+          0 0 20px #ff00cc,
+          0 0 40px #ff00cc,
+          0 0 80px #ff00cc;
+      }
+      91%, 93%, 95% {
+        color: #550033;
+        border-color: #550033;
+        text-shadow: none;
+        opacity: 0.4;
+      }
     }
   </style>
 </head>
